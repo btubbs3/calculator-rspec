@@ -81,12 +81,17 @@ describe Calculator do
 		expect(actual).to eq 4
 		end
 		
-		it 'dividing zero by an integer should return zero and error ' do 
-		calc = Calculator.new 
-		expect{ actual = calc.division(4,0) }.to raise_error(ZeroDivisionError)
-		end 
-		
-		
+		it 'dividing zero by an integer should return zero'do
+		calc = Calculator.new
+		actual = calc.division(0, 4)
+		expect(actual).to eq 0
+		end
+
+		it 'dividing zero by an integer should return zero'do
+		calc = Calculator.new
+		actual = calc.division(4, 0)
+		expect(actual).to eq 0
+		end
 		
 		it 'should accept more than 2 numbers at a time' do 
 		calc = Calculator.new 

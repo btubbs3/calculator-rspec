@@ -13,6 +13,10 @@ class Calculator
 	 end 
 	 
 	 def division(*n1)
+		begin
 		n1.inject(:/)
+		rescue ZeroDivisionError
+		0
+		end
 	 end
 end
