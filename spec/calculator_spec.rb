@@ -81,10 +81,9 @@ describe Calculator do
 		expect(actual).to eq 4
 		end
 		
-		it 'dividing zero by an integer should return zero' do 
+		it 'dividing zero by an integer should return zero and error ' do 
 		calc = Calculator.new 
-		actual = calc.division(4,0)
-		expect{ actual }.to raise_error(Errors::CannotDividebyZero)
+		expect{ actual = calc.division(4,0) }.to raise_error(ZeroDivisionError)
 		end 
 		
 		

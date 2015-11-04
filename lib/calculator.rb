@@ -14,6 +14,5 @@ class Calculator
 	 
 	 def division(*n1)
 		n1.inject(:/)
-		
 	 end
 end
